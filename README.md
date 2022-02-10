@@ -12,3 +12,10 @@ Zu Beginn des Spiels befinden sich Bauer, Wolf, Schaf und Kohlkopf auf der linke
 Es dürfen immer nur maximal 2 "Personen" im Boot sitzen.
 
 Werden Wolf & Schaf bzw. Schaf und Kohlkopf nicht beaufsichtigt, kommt es zu einem unerwünschten Fressverhalten - das Spiel ist dann verloren weil einer der "Personen" leider tot ist.
+
+Quellen:
+img/wolf.png => https://www.pinclipart.com/maxpin/xTimTh/
+img/bauer.png => https://us.123rf.com/450wm/saphatthachat/saphatthachat1609/saphatthachat160900104/62384359-illustration-design-pixel-kunst-bauer.jpg?ver=6
+img/schaf.png => https://www.flaticon.com/de/kostenloses-icon/schaf_2298528
+img/kohlkopf.png => https://thumbs.dreamstime.com/b/pixelkunstkohlikonen-vektorentwurf-pixelkunst-kohlikone-f-r-webdesign-mobilen-app-aufkleber-und-spiele-148680997.jpg
+img/wood.png => http://pixelartmaker.com/art/5ed26b954fb8e0e
