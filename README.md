@@ -15,7 +15,13 @@ Werden Wolf & Schaf bzw. Schaf und Kohlkopf nicht beaufsichtigt, kommt es zu ein
 
 Quellen:
 img/wolf.png => https://www.pinclipart.com/maxpin/xTimTh/
+
 img/bauer.png => https://us.123rf.com/450wm/saphatthachat/saphatthachat1609/saphatthachat160900104/62384359-illustration-design-pixel-kunst-bauer.jpg?ver=6
+
 img/schaf.png => https://www.flaticon.com/de/kostenloses-icon/schaf_2298528
+
 img/kohlkopf.png => https://thumbs.dreamstime.com/b/pixelkunstkohlikonen-vektorentwurf-pixelkunst-kohlikone-f-r-webdesign-mobilen-app-aufkleber-und-spiele-148680997.jpg
+
 img/wood.png => http://pixelartmaker.com/art/5ed26b954fb8e0e
+
+img/tree.png => https://www.seekpng.com/ipng/u2q8u2w7q8y3q8t4_pixel-art-tree-pixel-art-png/
