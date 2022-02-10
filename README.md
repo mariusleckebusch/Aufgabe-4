@@ -13,5 +13,7 @@ Es dürfen immer nur maximal 2 "Personen" im Boot sitzen.
 
 Werden Wolf & Schaf bzw. Schaf und Kohlkopf nicht beaufsichtigt, kommt es zu einem unerwünschten Fressverhalten - das Spiel ist dann verloren weil einer der "Personen" leider tot ist.
 
-![Steps](https://github.com/mariusleckebusch/Aufgabe-4/blob/master/img/stepnew.gif)
-
+Lösung:
+1. Der Bauer muss mit dem Kohlkopf den Fluss überqueren
+2. Der Bauer muss mit dem Wolf den Fluss überqueren
+3. Der Bauer muss mit dem Schaf den Fluss überqueren
