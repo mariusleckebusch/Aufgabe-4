@@ -33,7 +33,7 @@ Demo: [https://mariusleckebusch.github.io/Aufgabe-4/main](https://mariusleckebus
 - UP
 - LEFT
 
-Steuerung:
+#Steuerung:
 - Bauer und Schaf: LEFT
 - Bauer und Wolf: RIGHT
 - Bauer und Kohlkopf: DOWN
