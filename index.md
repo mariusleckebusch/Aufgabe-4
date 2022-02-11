@@ -16,12 +16,6 @@ Werden Wolf & Schaf bzw. Schaf und Kohlkopf nicht beaufsichtigt, kommt es zu ein
 
 Demo: [https://mariusleckebusch.github.io/Aufgabe-4/main](https://mariusleckebusch.github.io/Aufgabe-4/main/)
 
-Steuerung:
-- Bauer und Schaf: LEFT
-- Bauer und Wolf: RIGHT
-- Bauer und Kohlkopf: DOWN
-- Bauer: UP
-- 
 # Lösung
 - Der Bauer überquert mit dem Schaf den Fluss und setzt es am anderen Ufer ab.
 - Der Bauer rudert anschließend allein zurück.
@@ -38,3 +32,9 @@ Steuerung:
 - Right
 - UP
 - LEFT
+
+Steuerung:
+- Bauer und Schaf: LEFT
+- Bauer und Wolf: RIGHT
+- Bauer und Kohlkopf: DOWN
+- Bauer: UP
