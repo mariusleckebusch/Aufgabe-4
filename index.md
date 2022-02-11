@@ -23,6 +23,7 @@ Steuerung:
 - Bauer: UP
 <details>
   <summary>Lösung</summary>
+  
 # Lösung
 - Der Bauer überquert mit dem Schaf den Fluss und setzt es am anderen Ufer ab.
 - Der Bauer rudert anschließend allein zurück.
