@@ -32,9 +32,6 @@ Steuerung:
 - 6. Der Bauer rudert wieder allein zurück.
 - 7. Der Bauer nimmt schließlich das Schaf mit.
 
-<details>
-  <summary>Lösung Keys</summary>
-  
 - 1. LEFT
 - 2. UP
 - 3. DOWN
@@ -42,5 +39,4 @@ Steuerung:
 - 5. Right
 - 6. UP
 - 7. LEFT
-</details>
 </details>
