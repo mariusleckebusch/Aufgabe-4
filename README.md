@@ -34,6 +34,7 @@ Steuerung:
 
 <details>
   <summary>Lösung Keys</summary>
+  
 1. LEFT
 2. UP
 3. DOWN
