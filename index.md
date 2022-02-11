@@ -21,9 +21,7 @@ Steuerung:
 - Bauer und Wolf: RIGHT
 - Bauer und Kohlkopf: DOWN
 - Bauer: UP
-<details>
-  <summary>Lösung</summary>
-  
+- 
 # Lösung
 - Der Bauer überquert mit dem Schaf den Fluss und setzt es am anderen Ufer ab.
 - Der Bauer rudert anschließend allein zurück.
@@ -40,4 +38,3 @@ Steuerung:
 - Right
 - UP
 - LEFT
-</details>
