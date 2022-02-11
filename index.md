@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+## Wilkommen zur Aufgabe 4
 
-You can use the [editor on GitHub](https://github.com/mariusleckebusch/mariusleckebusch.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+Das Denkspiel "Wolf, Schaf, Kohlkopf" soll auf dem Computer nachprogrammiert werden.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Die Spielregeln sind folgende:
 
-### Markdown
+Gegeben sind ein Fluss, ein Bauer, ein Wolf, ein Schafund ein Kohlkopf. Weiterhin existierten ein Fluss sowie eine Boot, in das jeweils maximal zwei "Personen" einsteigen können.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Die wichtigste Randbedingung ist: Sobald der Bauer nicht aufpasst (=am selben Ort anwesend ist), frisst das Schaft den Kohlkopf bzw. der Wolf das Schaf.
 
-```markdown
-Syntax highlighted code block
+Zu Beginn des Spiels befinden sich Bauer, Wolf, Schaf und Kohlkopf auf der linken Seite des Flusses. Ziel des Spieles ist, sÃ¤mtliche "Personen" (Wolf, Schaf, Kohlkopf und den Bauern) wohlbehalten, das heißt lebend, ans rechte Ufer zu bringen.
 
-# Header 1
-## Header 2
-### Header 3
+Es dürfen immer nur maximal 2 "Personen" im Boot sitzen.
 
-- Bulleted
-- List
+Werden Wolf & Schaf bzw. Schaf und Kohlkopf nicht beaufsichtigt, kommt es zu einem unerwÃ¼nschten Fressverhalten - das Spiel ist dann verloren weil einer der "Personen" leider tot ist.
 
-1. Numbered
-2. List
+Demo: [https://mariusleckebusch.github.io/main](https://mariusleckebusch.github.io/main/)
 
-**Bold** and _Italic_ and `Code` text
+Steuerung:
+- Bauer und Schaf: LEFT
+- Bauer und Wolf: RIGHT
+- Bauer und Kohlkopf: DOWN
+- Bauer: UP
+<details>
+  <summary>LÃ¶sung</summary>
 
-[Link](url) and ![Image](src)
-```
+1. Der Bauer Ã¼berquert mit dem Schaf den Fluss und setzt es am anderen Ufer ab.
+2. Der Bauer rudert anschlieÃŸend allein zurÃ¼ck.
+3. Der Bauer nimmt jetzt den Kohlkopf mit. Er setzt ihn am Ufer ab.
+4. Damit das Schaf sich nicht Ã¼ber den Kohlkopf hermacht, nimmt er das Schaf auf seinem RÃ¼ckweg wieder mit.
+5. Der Bauer setzt jetzt das Schaf ab, nimmt den Wolf mit und lÃ¤sst ihn am anderen Ufer mit dem Kohlkopf zurÃ¼ck.
+6. Der Bauer rudert wieder alleine zurÃ¼ck.
+7. Der Bauer nimmt schlieÃŸlich das Schaf mit.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mariusleckebusch/mariusleckebusch.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<details>
+  <summary>LÃ¶sung Keys</summary>
+  
+1. LEFT
+2. UP
+3. DOWN
+4. LEFT
+5. Right
+6. UP
+7. LEFT
+</details>
+</details>
