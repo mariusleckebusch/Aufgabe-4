@@ -24,7 +24,6 @@ Steuerung:
 <details>
   <summary>Lösung</summary>
   
-# Lösung
 - Der Bauer überquert mit dem Schaf den Fluss und setzt es am anderen Ufer ab.
 - Der Bauer rudert anschließend allein zurück.
 - Der Bauer nimmt jetzt den Kohlkopf mit. Er setzt ihn am Ufer ab.
