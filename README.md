@@ -17,10 +17,10 @@ Demo:
 https://mariusleckebusch.github.io/Aufgabe-4
 
 Steuerung:
-Bauer und Schaf: LEFT
-Bauer und Wolf: RIGHT
-Bauer und Kohlkopf: DOWN
-Bauer: UP
+- Bauer und Schaf: LEFT
+- Bauer und Wolf: RIGHT
+- Bauer und Kohlkopf: DOWN
+- Bauer: UP
 <details>
   <summary>Lösung</summary>
 
