@@ -14,7 +14,7 @@ Es dürfen immer nur maximal 2 "Personen" im Boot sitzen.
 
 Werden Wolf & Schaf bzw. Schaf und Kohlkopf nicht beaufsichtigt, kommt es zu einem unerwÃ¼nschten Fressverhalten - das Spiel ist dann verloren weil einer der "Personen" leider tot ist.
 
-Demo: [https://mariusleckebusch.github.io/main](https://mariusleckebusch.github.io/main/)
+Demo: [https://mariusleckebusch.github.io/main](https://mariusleckebusch.github.io/aufgabe-4/main/)
 
 Steuerung:
 - Bauer und Schaf: LEFT
