@@ -31,7 +31,7 @@ Steuerung:
 - Der Bauer setzt jetzt das Schaf ab, nimmt den Wolf mit und lässt ihn am anderen Ufer mit dem Kohlkopf zurück.
 - Der Bauer rudert wieder allein zurück.
 - Der Bauer nimmt schließlich das Schaf mit.
-
+# Lösung Keys
 - LEFT
 - UP
 - DOWN
