@@ -22,7 +22,7 @@ Steuerung:
 - Bauer und Kohlkopf: DOWN
 - Bauer: UP
 <details>
-  <summary>LÃ¶sung</summary>
+  <summary>Lösung</summary>
 
 1. Der Bauer Ã¼berquert mit dem Schaf den Fluss und setzt es am anderen Ufer ab.
 2. Der Bauer rudert anschlieÃŸend allein zurÃ¼ck.
@@ -33,7 +33,7 @@ Steuerung:
 7. Der Bauer nimmt schlieÃŸlich das Schaf mit.
 
 <details>
-  <summary>LÃ¶sung Keys</summary>
+  <summary>Lösung Keys</summary>
   
 1. LEFT
 2. UP
