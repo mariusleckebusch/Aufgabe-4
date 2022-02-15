@@ -3,20 +3,55 @@ var html_schaf = document.getElementById('schaf');
 var html_wolf = document.getElementById('wolf');
 var html_kohlkopf = document.getElementById('kohlkopf');
 var html_bauer = document.getElementById('bauer');
-var button_restart = document.getElementById('restart').onclick = function () { location.reload() };
+var button_restart = document.getElementById('restart').onclick = function () { RestartGame() };
 var button_bauer_und_schaf = document.getElementById('bauerundschaf');
 var button_bauer_und_wolf = document.getElementById('bauerundwolf');
 var button_bauer_und_kohlkopf = document.getElementById('bauerundkohlkopf');
 var button_bauer = document.getElementById('bauer1');
 var button_auto = document.getElementById('auto').onclick = function () { Teilaufgabe_5() };
+var button_logs = document.getElementById('logs').onclick = function () { Log() };
 var keysenabled = true;
+var logs = false;
+AddLog("Loaded Html Variables!");
+// Log();
+// document.getElementById('textarea').value = "";
+// function Log() {
+//     if (!logs) {
+//         var textarea = document.getElementById('textarea');
+//         textarea.style.display = 'block'
+//         logs = true; 
+//         document.getElementById('logs').innerText = "Hide Logs";
+//     } else {
+//         var textarea = document.getElementById('textarea');
+//         textarea.style.display = 'none'
+//         logs = false; 
+//         document.getElementById('logs').innerText = "Show Logs";
+//     }
+// }
+
+function AddLog(log) {
+        // var textarea = document.getElementById('textarea');
+        // var oldLog = textarea.value;
+        var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        var date = new Date(Date.now())
+        // if(textarea.value) {
+        //     var value = textarea.value = oldLog + "\n[" + date.toLocaleDateString("de-DE", options) + "]: " + log
+        // } else {
+        //     var value = textarea.value = oldLog + "[" + date.toLocaleDateString("de-DE", options) + "]: " + log
+        // }
+       console.log("[" + date.toLocaleDateString("de-DE", options) + "]: " +log)
+        // textarea.value = value;
+}
+
+
 function UpdateGameInfo() {
     html_schaf.innerText = JSON.stringify(Schaf);
     html_wolf.innerText = JSON.stringify(Wolf);
     html_kohlkopf.innerText = JSON.stringify(Kohlkopf);
     html_bauer.innerText = JSON.stringify(Bauer);
 }
-
+error.innerText = "Press a Button to Start!";
+AddLog("Start Mesaage set!");
 var Wolf = {
     name: "Wolf",
     age: 1,
@@ -40,12 +75,13 @@ var Bauer = {
     age: 1,
     position: "right"
 }
-
+AddLog("Loaded Person Variables!");
 UpdateGameInfo()
+AddLog("Update Game Info!");
 
-
-
-function Teilaufgabe_5() {
+function RestartGame() {
+    var textarea = document.getElementById('textarea');
+    textarea.value = "";
     Bauer.age = 1;
     Bauer.position = "right";
     Kohlkopf.age = 1;
@@ -54,47 +90,68 @@ function Teilaufgabe_5() {
     Schaf.position = "right";
     Wolf.age = 1;
     Wolf.position = "right";
+    AddLog("Set Person Variables to default!");
     UpdateGameInfo()
-    error.innerText = "Automode Starting...";
+    AddLog("Update Game Info!");
+    error.innerText = "Press a Button to Start!";
+    AddLog("Start Mesaage set!");
+    keysenabled = true;
+    AddLog("Set Keys to enabled")
+}
+
+function Teilaufgabe_5() {
+    document.getElementById('auto').disabled = true;
+    document.getElementById('auto').innerText = "Running"
+    AddLog("Button [id=auto] text was changed to Running")
+    AddLog("=============AUTO MODE HAS STARTED=============")
     setTimeout(() => {
         BauerundSchaf() //left
-        error.innerText = "Left was Pressed"
+        AddLog("Left was Pressed")
     }, 1000);
     setTimeout(() => {
-        error.innerText = "Up was Pressed"
         Bauer_Key() //up
+        AddLog("Up was Pressed")
     }, 2000);
     setTimeout(() => {
-        error.innerText = "Down was Pressed"
         BauerundKohlkopf() //down
+        AddLog("Down was Pressed")
     }, 3000);
     setTimeout(() => {
-        error.innerText = "Left was Pressed"
         BauerundSchaf() //left
+        AddLog("Left was Pressed")
     }, 4000);
     setTimeout(() => {
-        error.innerText = "Right was Pressed"
         BauerundWolf() //right
+        AddLog("Right was Pressed")
     }, 5000);
     setTimeout(() => {
-        error.innerText = "Up was Pressed"
         Bauer_Key() //up
+        AddLog("Up was Pressed")
     }, 6000);
     setTimeout(() => {
-        error.innerText = "Left was Pressed"
         BauerundSchaf() //left
+        AddLog("Left was Pressed")
+        document.getElementById('auto').disabled = false;
+        AddLog("Button [id=auto] was enabled")
+        document.getElementById('auto').innerText = "Auto"
+        AddLog("Button [id=auto] text was changed to Auto")
+        AddLog("=============AUTO MODE HAS ENDED=============")
     }, 7000);
 }
 
 function BauerundSchaf() {
     if (Bauer.position != Schaf.position) {
         error.innerText = 'Der Bauer ist nicht beim Schaf';
+        AddLog("Set Info")
     } else {
         if (Bauer.position == "right" && Schaf.position == "right") {
             Bauer.position = "left";
             Schaf.position = "left";
             Bauer.age = Bauer.age + 1;
             Schaf.age = Schaf.age + 1;
+            AddLog("Persons Variables Updated")
+            error.innerText = "";
+            AddLog("Set Info")
             CheckLebewesen();
             UpdateGameInfo();
         } else {
@@ -102,6 +159,7 @@ function BauerundSchaf() {
             Schaf.position = "right";
             Bauer.age = Bauer.age + 1;
             Schaf.age = Schaf.age + 1;
+            error.innerText = "";
             CheckLebewesen();
             UpdateGameInfo();
         }
@@ -117,6 +175,9 @@ function BauerundWolf() {
             Wolf.position = "left";
             Bauer.age = Bauer.age + 1;
             Wolf.age = Wolf.age + 1;
+            AddLog("Persons Variables Updated")
+            error.innerText = "";
+            AddLog("Set Info")
             CheckLebewesen();
             UpdateGameInfo();
         } else {
@@ -124,6 +185,9 @@ function BauerundWolf() {
             Wolf.position = "right";
             Bauer.age = Bauer.age + 1;
             Wolf.age = Wolf.age + 1;
+            AddLog("Persons Variables Updated")
+            error.innerText = "";
+            AddLog("Set Info")
             CheckLebewesen();
             UpdateGameInfo();
         }
@@ -139,6 +203,9 @@ function BauerundKohlkopf() {
             Kohlkopf.position = "left";
             Bauer.age = Bauer.age + 1;
             Kohlkopf.age = Kohlkopf.age + 1;
+            AddLog("Persons Variables Updated")
+            error.innerText = "";
+            AddLog("Set Info")
             CheckLebewesen();
             UpdateGameInfo();
         } else {
@@ -146,6 +213,9 @@ function BauerundKohlkopf() {
             Kohlkopf.position = "right";
             Bauer.age = Bauer.age + 1;
             Kohlkopf.age = Kohlkopf.age + 1;
+            AddLog("Persons Variables Updated")
+            error.innerText = "";
+            AddLog("Set Info")
             CheckLebewesen();
             UpdateGameInfo();
         }
@@ -156,11 +226,17 @@ function Bauer_Key() {
     if (Bauer.position == "right" && Kohlkopf.position == "right") {
         Bauer.position = "left";
         Bauer.age = Bauer.age + 1;
+        AddLog("Persons Variables Updated")
+        error.innerText = "";
+        AddLog("Set Info")
         CheckLebewesen();
         UpdateGameInfo();
     } else {
         Bauer.position = "right";
         Bauer.age = Bauer.age + 1;
+        AddLog("Persons Variables Updated")
+        error.innerText = "";
+        AddLog("Set Info")
         CheckLebewesen();
         UpdateGameInfo();
     }
@@ -169,21 +245,25 @@ function Bauer_Key() {
 
 button_bauer_und_schaf.onclick = function () {
     if (keysenabled) {
+        AddLog("Button Bauer & Schaf was Pressed")
         BauerundSchaf();
     }
 }
 button_bauer_und_wolf.onclick = function () {
     if (keysenabled) {
+        AddLog("Button Bauer & Wolf was Pressed")
         BauerundWolf();
     }
 }
 button_bauer_und_kohlkopf.onclick = function () {
     if (keysenabled) {
+        AddLog("Button Bauer & Kohlkopf was Pressed")
         BauerundKohlkopf();
     }
 }
 button_bauer.onclick = function () {
     if (keysenabled) {
+        AddLog("Button Bauer was Pressed")
         Bauer_Key();
     }
 }
@@ -193,22 +273,22 @@ button_bauer.onclick = function () {
 window.addEventListener('keydown', function (event) {
     if (keysenabled) {
         if (event.keyCode == 37) {
-            error.innerText = 'Left was pressed';
+            AddLog("Key ARROW LEFT was Pressed")
             //Bauer und Schaf
             BauerundSchaf();
         }
         if (event.keyCode == 39) {
-            error.innerText = 'Right was pressed';
+            AddLog("Key ARROW RIGHT was Pressed")
             //Bauer und Wolf
             BauerundWolf();
         }
         if (event.keyCode == 40) {
-            error.innerText = 'Down was pressed';
+            AddLog("Key ARROW DOWN was Pressed")
             //Bauer und Kohlkopf
             BauerundKohlkopf();
         }
         if (event.keyCode == 38) {
-            error.innerText = 'Up was pressed';
+            AddLog("Key ARROW UP was Pressed")
             //Bauer alleine
             Bauer_Key();
         }
@@ -218,18 +298,31 @@ window.addEventListener('keydown', function (event) {
 function CheckLebewesen() {
     if (Wolf.position == Schaf.position && Bauer.position !== Schaf.position) {
         error.innerText = "Der Wolf hat das Schaf gefressen, da der Bauer nicht aufgepasst hat!";
+        AddLog("Set Info")
+        AddLog("Game Over Wolf & Schaf");
         keysenabled = false;
+        AddLog("Keys was set to disabled");
     }
     if (Schaf.position == Kohlkopf.position && Bauer.position !== Kohlkopf.position) {
         error.innerText = "Das Schaf hat den Kohlkopf gefressen, da der Bauer nicht aufgepasst hat!";
+        AddLog("Set Info")
+        AddLog("Game Over Schaf & Kohlkopf");
         keysenabled = false;
+        AddLog("Keys was set to disabled");
     }
     if (Wolf.position == "left" && Schaf.position == "left" && Kohlkopf.position == "left" && Bauer.position == "left") {
         error.innerText = "Alle Lebewesen wurden erfolgreich auf das andere Ufer gebracht";
+        AddLog("Set Info")
+        AddLog("Game Win :)");
         keysenabled = false;
+        AddLog("Keys was set to disabled");
     }
     if (Wolf.age == 10 || Bauer.age == 10 || Kohlkopf.age == 10 || Schaf.age == 10) {
         error.innerText = "Ein Lebewesen ist gestorben da es zu Alt geworden ist";
+        AddLog("Set Info")
+        AddLog("Game Over a Person was to old");
         keysenabled = false;
+        AddLog("Keys was set to disabled");
     }
 }
+

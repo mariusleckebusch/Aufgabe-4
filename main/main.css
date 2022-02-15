@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@500&display=swap");
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+
+.cv-code {
+  position: absolute;
+  content-visibility: auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #1f1e1e;
+  width: 686px;
+  max-width: 95%;
+  margin: 0 auto;
+  right: 605px;
+}
+.cv-code-header {
+  display: flex;
+  align-items: center;
+  background: #393d3e;
+  color: #eee;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: relative;
+  font-family: "JetBrains Mono", monospace;
+}
+.cv-code-buttons {
+  margin-right: 1rem;
+  display: flex;
+  gap: 6px;
+}
+.cv-code-buttons .fake-button[data-close] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #f77669;
+}
+.cv-code-buttons .fake-button[data-minify] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #ffcb6b;
+}
+.cv-code-buttons .fake-button[data-expand] {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #c3e88d;
+}
+.cv-code-title {
+  margin: 0 auto;
+  display: block;
+}
+.cv-code .content {
+  color: white;
+  padding: 1rem;
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: 0.8rem;
+}
+.cv-code .content .instruction {
+  display: block;
+  padding: 0 0 7px 0;
+}
+.cv-code .content .user {
+  color: #6db928;
+}
+.cv-code .content .path, .cv-code .content .command {
+  color: #6fa5cd;
+}
+.info {
+  color: #1675be;
+}
