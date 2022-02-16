@@ -16,6 +16,8 @@ Werden Wolf & Schaf bzw. Schaf und Kohlkopf nicht beaufsichtigt, kommt es zu ein
 
 Demo: [https://mariusleckebusch.github.io/Aufgabe-4/main](https://mariusleckebusch.github.io/Aufgabe-4/main/)
 
+Musterlösung (C# und Python): [https://github.com/ChristianQuanz/WolfSheepCabbage/](https://github.com/ChristianQuanz/WolfSheepCabbage/)
+
 Steuerung:
 - Bauer und Schaf: LEFT
 - Bauer und Wolf: RIGHT
