@@ -1,30 +1,26 @@
 var Wolf = {
-    name: "Wolf",
     age: 1,
     position: "right"
 }
 
 var Schaf = {
-    name: "Schaf",
     age: 1,
     position: "right"
 }
 
 var Kohlkopf = {
-    name: "Kohlkopf",
     age: 1,
     position: "right"
 }
 
 var Bauer = {
-    name: "Bauer",
     age: 1,
     position: "right"
 }
 
-Brutfore()
-function Brutfore() {
-    for (var i = 0; i < 1000; i++) {
+Brutforce()
+function Brutforce() {
+    while(true) {
         var random = Math.floor(Math.random() * (5 - 1)) + 1;
         if (Check() == false) {
             if (random == 1) {
@@ -58,7 +54,12 @@ function AddLog(text) {
 
 
 
-
+function AddAge() {
+    Bauer.age = Bauer.age + 1;
+    Schaf.age = Schaf.age + 1;
+    Wolf.age = Wolf.age + 1;
+    Kohlkopf.age = Kohlkopf.age +1;
+}
 
 
 
@@ -70,14 +71,12 @@ function BauerundSchaf() {
         if (Bauer.position == "right" && Schaf.position == "right") {
             Bauer.position = "left";
             Schaf.position = "left";
-            Bauer.age = Bauer.age + 1;
-            Schaf.age = Schaf.age + 1;
+            AddAge()
             return true;
         } else {
             Bauer.position = "right";
             Schaf.position = "right";
-            Bauer.age = Bauer.age + 1;
-            Schaf.age = Schaf.age + 1;
+            AddAge()
             return true;
         }
     }
@@ -90,14 +89,12 @@ function BauerundWolf() {
         if (Bauer.position == "right" && Wolf.position == "right") {
             Bauer.position = "left";
             Wolf.position = "left";
-            Bauer.age = Bauer.age + 1;
-            Wolf.age = Wolf.age + 1;
+            AddAge()
             return true;
         } else {
             Bauer.position = "right";
             Wolf.position = "right";
-            Bauer.age = Bauer.age + 1;
-            Wolf.age = Wolf.age + 1;
+            AddAge()
             return true;
         }
     }
@@ -110,14 +107,12 @@ function BauerundKohlkopf() {
         if (Bauer.position == "right" && Kohlkopf.position == "right") {
             Bauer.position = "left";
             Kohlkopf.position = "left";
-            Bauer.age = Bauer.age + 1;
-            Kohlkopf.age = Kohlkopf.age + 1;
+            AddAge()
             return true;
         } else {
             Bauer.position = "right";
             Kohlkopf.position = "right";
-            Bauer.age = Bauer.age + 1;
-            Kohlkopf.age = Kohlkopf.age + 1;
+            AddAge()
             return true;
         }
     }
@@ -126,9 +121,11 @@ function BauerundKohlkopf() {
 function Bauer_Key() {
     if (Bauer.position == "right" && Kohlkopf.position == "right") {
         Bauer.position = "left";
+        AddAge()
         return true;
     } else {
         Bauer.position = "right";
+        AddAge()
         return true;
     }
 }

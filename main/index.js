@@ -17,29 +17,6 @@ var maxage = 15;
 AddLog("Loaded Html Variables!");
 Log();
 
-function Brutfore() {
-    var random = Math.floor(Math.random() * (5 - 1) ) + 1;
-    console.log(random)
-    for(var i = 0; i < 1000; i++) {
-        if(Wolf.position == Schaf.position || Schaf.position == Kohlkopf.position && Bauer.position != Schaf.position || Bauer.position != Schaf.position || Bauer.position != Wolf.position) {
-            if(random == 1) {
-
-            }
-            if(random == 2) {
-
-            }
-            if(random == 3) {
-
-            }
-            if(random == 4) {
-
-            }
-        } else if(Wolf.position == "left" && Schaf.position == "left" && Bauer.position == "left" && Kohlkopf.position == "left") {
-            return;
-        }
-    }
-}
-
 function Log() {
     if (!logs) {
         var textarea = document.getElementById('content');
@@ -109,7 +86,12 @@ var Bauer = {
 AddLog("Loaded Person Variables!");
 UpdateGameInfo()
 AddLog("Update Game Info!");
-
+function AddAge() {
+    Bauer.age = Bauer.age + 1;
+    Schaf.age = Schaf.age + 1;
+    Wolf.age = Wolf.age + 1;
+    Kohlkopf.age = Kohlkopf.age +1;
+}
 function RestartGame() {
     Bauer.age = 1;
     Bauer.position = "right";
@@ -177,8 +159,7 @@ function BauerundSchaf() {
         if (Bauer.position == "right" && Schaf.position == "right") {
             Bauer.position = "left";
             Schaf.position = "left";
-            Bauer.age = Bauer.age + 1;
-            Schaf.age = Schaf.age + 1;
+            AddAge()
             AddLog("Persons Variables Updated")
             error.innerText = "";
             AddLog("Set Info")
@@ -187,8 +168,7 @@ function BauerundSchaf() {
         } else {
             Bauer.position = "right";
             Schaf.position = "right";
-            Bauer.age = Bauer.age + 1;
-            Schaf.age = Schaf.age + 1;
+            AddAge()
             error.innerText = "";
             CheckLebewesen();
             UpdateGameInfo();
@@ -203,8 +183,7 @@ function BauerundWolf() {
         if (Bauer.position == "right" && Wolf.position == "right") {
             Bauer.position = "left";
             Wolf.position = "left";
-            Bauer.age = Bauer.age + 1;
-            Wolf.age = Wolf.age + 1;
+            AddAge()
             AddLog("Persons Variables Updated")
             error.innerText = "";
             AddLog("Set Info")
@@ -213,8 +192,7 @@ function BauerundWolf() {
         } else {
             Bauer.position = "right";
             Wolf.position = "right";
-            Bauer.age = Bauer.age + 1;
-            Wolf.age = Wolf.age + 1;
+            AddAge()
             AddLog("Persons Variables Updated")
             error.innerText = "";
             AddLog("Set Info")
@@ -231,8 +209,7 @@ function BauerundKohlkopf() {
         if (Bauer.position == "right" && Kohlkopf.position == "right") {
             Bauer.position = "left";
             Kohlkopf.position = "left";
-            Bauer.age = Bauer.age + 1;
-            Kohlkopf.age = Kohlkopf.age + 1;
+            AddAge()
             AddLog("Persons Variables Updated")
             error.innerText = "";
             AddLog("Set Info")
@@ -241,8 +218,7 @@ function BauerundKohlkopf() {
         } else {
             Bauer.position = "right";
             Kohlkopf.position = "right";
-            Bauer.age = Bauer.age + 1;
-            Kohlkopf.age = Kohlkopf.age + 1;
+            AddAge()
             AddLog("Persons Variables Updated")
             error.innerText = "";
             AddLog("Set Info")
