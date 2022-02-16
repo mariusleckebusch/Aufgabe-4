@@ -10,39 +10,70 @@ var button_bauer_und_kohlkopf = document.getElementById('bauerundkohlkopf');
 var button_bauer = document.getElementById('bauer1');
 var button_auto = document.getElementById('auto').onclick = function () { Teilaufgabe_5() };
 var button_logs = document.getElementById('logs').onclick = function () { Log() };
+var button_clearlog = document.getElementById('clearlogs').onclick = function() { ClearLog() };
 var keysenabled = true;
-var logs = false;
+var logs = true;
+var maxage = 15;
 AddLog("Loaded Html Variables!");
-// Log();
-// document.getElementById('textarea').value = "";
-// function Log() {
-//     if (!logs) {
-//         var textarea = document.getElementById('textarea');
-//         textarea.style.display = 'block'
-//         logs = true; 
-//         document.getElementById('logs').innerText = "Hide Logs";
-//     } else {
-//         var textarea = document.getElementById('textarea');
-//         textarea.style.display = 'none'
-//         logs = false; 
-//         document.getElementById('logs').innerText = "Show Logs";
-//     }
-// }
+Log();
 
-function AddLog(log) {
-        // var textarea = document.getElementById('textarea');
-        // var oldLog = textarea.value;
-        var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-        var date = new Date(Date.now())
-        // if(textarea.value) {
-        //     var value = textarea.value = oldLog + "\n[" + date.toLocaleDateString("de-DE", options) + "]: " + log
-        // } else {
-        //     var value = textarea.value = oldLog + "[" + date.toLocaleDateString("de-DE", options) + "]: " + log
-        // }
-       console.log("[" + date.toLocaleDateString("de-DE", options) + "]: " +log)
-        // textarea.value = value;
+function Brutfore() {
+    var random = Math.floor(Math.random() * (5 - 1) ) + 1;
+    console.log(random)
+    for(var i = 0; i < 1000; i++) {
+        if(Wolf.position == Schaf.position || Schaf.position == Kohlkopf.position && Bauer.position != Schaf.position || Bauer.position != Schaf.position || Bauer.position != Wolf.position) {
+            if(random == 1) {
+
+            }
+            if(random == 2) {
+
+            }
+            if(random == 3) {
+
+            }
+            if(random == 4) {
+
+            }
+        } else if(Wolf.position == "left" && Schaf.position == "left" && Bauer.position == "left" && Kohlkopf.position == "left") {
+            return;
+        }
+    }
 }
 
+function Log() {
+    if (!logs) {
+        var textarea = document.getElementById('content');
+        textarea.style.display = 'block'
+        logs = true; 
+        document.getElementById('logs').innerText = "Hide Logs";
+    } else {
+        var textarea = document.getElementById('content');
+        textarea.style.display = 'none'
+        logs = false; 
+        document.getElementById('logs').innerText = "Show Logs";
+    }
+}
+
+function AddLog(log) {
+        var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        var date = new Date(Date.now())
+
+       console.log("[" + date.toLocaleDateString("de-DE", options) + "]: " +log)
+       var div = document.createElement('div');
+       var span = document.createElement('span');
+       var span1 = document.createElement('span');
+       div.className = 'instruction';
+       span.className = 'user';
+       span.innerText = "[" + date.toLocaleDateString("de-DE", options) + "]: ";
+       span1.className = 'info'
+       span1.innerText = log;
+       div.appendChild(span)
+       span.appendChild(span1)
+       document.getElementById('content').appendChild(div)
+
+}
+
+function ClearLog() {document.getElementById('content').innerHTML="";}
 
 function UpdateGameInfo() {
     html_schaf.innerText = JSON.stringify(Schaf);
@@ -80,8 +111,6 @@ UpdateGameInfo()
 AddLog("Update Game Info!");
 
 function RestartGame() {
-    var textarea = document.getElementById('textarea');
-    textarea.value = "";
     Bauer.age = 1;
     Bauer.position = "right";
     Kohlkopf.age = 1;
@@ -90,6 +119,7 @@ function RestartGame() {
     Schaf.position = "right";
     Wolf.age = 1;
     Wolf.position = "right";
+    document.getElementById('content').innerHTML = "";
     AddLog("Set Person Variables to default!");
     UpdateGameInfo()
     AddLog("Update Game Info!");
@@ -317,7 +347,7 @@ function CheckLebewesen() {
         keysenabled = false;
         AddLog("Keys was set to disabled");
     }
-    if (Wolf.age == 10 || Bauer.age == 10 || Kohlkopf.age == 10 || Schaf.age == 10) {
+    if (Wolf.age == maxage || Bauer.age == maxage || Kohlkopf.age == maxage || Schaf.age == maxage) {
         error.innerText = "Ein Lebewesen ist gestorben da es zu Alt geworden ist";
         AddLog("Set Info")
         AddLog("Game Over a Person was to old");

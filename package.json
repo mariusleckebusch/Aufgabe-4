@@ -1,5 +1,20 @@
 {
-  "dependencies": {
-    "input": "^1.0.1"
-  }
+  "name": "aufgabe-4",
+  "description": "Das Denkspiel „Wolf, Schaf, Kohlkopf“ soll auf dem Computer nachprogrammiert werden.",
+  "version": "1.0.0",
+  "main": "bruteforce.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariusleckebusch/Aufgabe-4.git"
+  },
+  "author": "Marius LEckebusch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariusleckebusch/Aufgabe-4/issues"
+  },
+  "homepage": "https://github.com/mariusleckebusch/Aufgabe-4#readme"
 }
